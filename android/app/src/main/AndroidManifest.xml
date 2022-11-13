@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="pub.izumi.abyss">
    <application
-        android:label="abyss"
+        android:label="深渊上传"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
