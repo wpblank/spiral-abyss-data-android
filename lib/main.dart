@@ -26,9 +26,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final controller = Completer<WebViewController>();
 
-  void selectServer() {
+  void selectServer(String server) {
     controller.future.then((web) {
-      url = HOYOLAB;
+      url = server;
       web.runJavascript("window.location.href = '$url'");
     });
   }
@@ -70,12 +70,12 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             TextButton(
-              onPressed: selectServer,
+              onPressed: () => selectServer(MIHOYO),
               child: const Text('国服', style: TextStyle(color: Colors.black87)),
             ),
             const SizedBox(),
             TextButton(
-              onPressed: selectServer,
+              onPressed: () => selectServer(HOYOLAB),
               child: const Text('国际服', style: TextStyle(color: Colors.black87)),
             ),
           ], //均分底部导航栏横向空间
